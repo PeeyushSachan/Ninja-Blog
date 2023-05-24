@@ -24,3 +24,29 @@ git commit -m "first commit"
 git push -u origin main
 
 
+
+
+contributer side  git editing
+
+1) frok
+2)  git clone  repository
+3)  git checkout -b <branch name></branch>
+4 commit
+5) git push origin  <branch name></branch>
+
+6)create pull request
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
