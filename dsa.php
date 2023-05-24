@@ -58,6 +58,7 @@
 <?php include('layout/navbar.php')   ?>
 
 
+
 <!--    END     NAV----BAR -----------     NAV----BAR ----------- NAV----BAR ----------- NAV----BAR -----------         --->
 
 <div class='w3-sidebar w3-collapse' id='sidenav'>
