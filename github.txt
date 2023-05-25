@@ -37,6 +37,16 @@ contributer side  git editing
 6)create pull request
 
 
+how to switch to master
+
+git checkout master
+
+Switched to branch 'master'
+
+
+
+
+
 
 
 
