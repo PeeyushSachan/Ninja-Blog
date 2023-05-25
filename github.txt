@@ -58,7 +58,7 @@ Merge the changes: After fetching the latest changes, merge them into your curre
 
 Resolve conflicts: If there are any conflicts between the changes in the remote master branch and your branch, Git will prompt you to resolve them. Open the files with conflicts in a text editor, look for the conflicting sections marked by Git, and manually resolve the differences. Save the changes and continue the merge process by executing git add <file> for each resolved file and then git commit to finalize the merge commit.
 
-After completing these  jgg steps, your branch should be updated with the latest code from the master branch. Remember to thoroughly test your code before pushing it to the remote repository to ensure it works as expected.
+After completing these  jggsteps, your branch should be updated with the latest code from the master branch. Remember to thoroughly test your code before pushing it to the remote repository to ensure it works as expected.
 
 
 
