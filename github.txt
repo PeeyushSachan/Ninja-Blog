@@ -46,48 +46,6 @@ Switched to branch 'master'
 
 
 
+ADMIN PANEL COMPONENT
 
-
-To update your code to match the latest changes in the master branch, you can follow these steps:
-
-Checkout the master branch: First, ensure that you are currently on your branch and not on the master branch. You can use the command git branch to see the list of branches and confirm your current branch. If you're on your branch, switch to the master branch using git checkout master.
-
-Fetch the latest changes: Fetch the latest changes from the remote repository's master branch using git fetch origin master. This command will retrieve the latest commits from the master branch without modifying your local code.
-
-Merge the changes: After fetching the latest changes, merge them into your current branch. Execute git merge origin/master to merge the changes from the remote master branch into your branch. This will update your branch with the latest code.
-
-Resolve conflicts: If there are any conflicts between the changes in the remote master branch and your branch, Git will prompt you to resolve them. Open the files with conflicts in a text editor, look for the conflicting sections marked by Git, and manually resolve the differences. Save the changes and continue the merge process by executing git add <file> for each resolved file and then git commit to finalize the merge commit.
-
-<<<<<<< HEAD
-After completing these  jgg steps, your branch should be updated with the latest code from the master branch. Remember to thoroughly test your code before pushing it to the remote repository to ensure it works as expected.
-=======
-After completing these  jggsteps, your branch should be updated with the latest code from the master branch. Remember to thoroughly test your code before pushing it to the remote repository to ensure it works as expected.
->>>>>>> 0318caed8d7dc7d6021f0c76bef5a60026a8e980
-
-
-
-
-
-how to direct work on mater as colabrater
-
-As a collaborator, you typically have the ability to work on the master branch directly, just like the repository owner or administrators. Here's how you can update your code to match the latest changes in the master branch:
-
-Commit or stash your local changes: Before updating your code, it's recommended to commit or stash any local changes you have made in your current branch. Use git status to check the status of your branch and ensure there are no uncommitted changes. If there are, either commit them using git commit -m "Your commit message" or stash them using git stash to temporarily save your changes.
-
-Fetch the latest changes: Run git fetch origin to fetch the latest changes from the remote repository. This command retrieves the latest commits and updates the remote tracking branches in your local repository.
-
-Update your local master branch: Switch to the master branch using git checkout master. Then, merge the latest changes from the remote master branch into your local master branch by running git merge origin/master.
-
-Apply your local changes: If you had local changes that you committed or stashed earlier, you can now apply them to the updated master branch. Use git stash apply to apply the stashed changes or git cherry-pick <commit> to apply specific commits you made on your branch.
-
-Test and resolve conflicts: Thoroughly test your code to ensure it functions correctly with the latest changes. If there are any conflicts during the merge process, Git will notify you. Open the conflicting files, resolve the conflicts manually by editing the files, and then use git add <file> to mark the conflicts as resolved. Finally, commit your changes using git commit -m "Merge conflicts resolved".
-
-After following these steps, your local master branch should be updated with the latest changes from the remote master branch, and your local changes should be reapplied if necessary. Remember to push your changes to the remote repository using git push origin master to reflect the updates for other collaborators.
-
-
-
-
-<h3> sfkbshs s fsg fsudfs ss79yff susfn 7yfw wwtf</h3>
-
-<h3> sfkbshs s fsg fsudfs ss79yff susfn 7yfw wwtf</h3>
-
+https://sb-admin-pro.startbootstrap.com/alerts.html

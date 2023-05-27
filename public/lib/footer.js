@@ -104,6 +104,11 @@ skyscraperResize();
 function open_menu() {
   var x, m;
   m = (document.getElementById("leftmenu") || document.getElementById("sidenav"));
+
+  //m = (document.getElementById("leftmenu") || document.getElementById("sidenav"));  eddited by peeyush
+
+
+
   if (m.style.display == "block") {
     close_menu();
   } else {
