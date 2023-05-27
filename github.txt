@@ -50,4 +50,4 @@ ADMIN PANEL COMPONENT
 
 https://sb-admin-pro.startbootstrap.com/alerts.html
 
-update
+
