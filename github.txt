@@ -49,4 +49,3 @@ Switched to branch 'master'
 ADMIN PANEL COMPONENT
 
 https://sb-admin-pro.startbootstrap.com/alerts.html
-
