@@ -57,15 +57,12 @@
   <?php include('layout/navbar.php')   ?>
 
 
-  <<<<<<< HEAD:dsa.php <!-- END NAV----BAR ----------- NAV----BAR ----------- NAV----BAR ----------- NAV----BAR ----------- --->
-    =======
-    <!--    END     NAV----BAR -----------     NAV----BAR ----------- NAV----BAR ----------- NAV----BAR -----------         --->
-    >>>>>>> 0d2e25f9d9c88adbe2028989fe3d63b8b5dac11f:default.php
-
     <div class='w3-sidebar w3-collapse' id='sidenav'>
       <div id='leftmenuinner'>
         <div class='w3-light-grey' id='leftmenuinnerinner'>
           <!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+         
+         
           <h2 class="left"><span class="left_h2">HTML</span> Tutorial</h2>
           <a target="_top" href="default.html">HTML HOME</a>
           <a target="_top" href="default.html">your tittle 1</a>
