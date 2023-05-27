@@ -1,0 +1,5 @@
+update own repo
+
+git fetch
+
+git merge origin/master

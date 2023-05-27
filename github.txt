@@ -49,8 +49,7 @@ Switched to branch 'master'
 ADMIN PANEL COMPONENT
 
 https://sb-admin-pro.startbootstrap.com/alerts.html
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 1696dfbe5eb0c115adfdf628572b152b3af5a2a7
+
+
