@@ -4,7 +4,19 @@
 <?php
 
 
+
+
+
+
 include('dbcon.php');
+
+
+
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+ echo "Connected successfully";
 
 $n_sql= "select*from navbar";
 $n_result=mysqli_query($conn,$n_sql);
@@ -25,23 +37,16 @@ $n_result=mysqli_query($conn,$n_sql);
       <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
       <a href='index.php' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
 
-<?php 
-if(mysqli_num_rows($n_result)>0){
 
 
-  while($row=mysqli_fetch_assoc($n_result)>0)
-  {
-
+<?php
+if (mysqli_num_rows($n_result) > 0) {
+  while ($row = mysqli_fetch_assoc($n_result)) {
     ?>
-
-      <a class="w3-bar-item w3-button" href='default.php' title='Python Tutorial'><?php $row["id"] ?></a>
-
-      
-      <?php
-    }
-    }
-
-
+    <a class="w3-bar-item w3-button" href='default.php' title='Python Tutorial'><?php echo $row["id"]; ?></a>
+    <?php
+  }
+}
 ?>
 
      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>MORE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
