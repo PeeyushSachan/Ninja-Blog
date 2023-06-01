@@ -1,3 +1,20 @@
+
+
+
+
+<?php 
+
+include('dbcon.php');
+
+
+ 
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+ //echo "Connected successfully";
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -48,6 +65,8 @@
 
     <div id="theworldsgreatest" class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">
       your blog slogan
+
+     
     </div>
 
   </div>
@@ -62,18 +81,103 @@
         <div class='w3-light-grey' id='leftmenuinnerinner'>
           <!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
          
+
+        
+
+          <?php
+          
+        /*  $req=$_REQUEST['req'];
+
+
+  $side_n_sql= "select*from sidenavbar where top_menu ='$req'";
+
+
+  $side_n_result=mysqli_query($conn,$side_n_sql);
+
+  
+
+  if (mysqli_num_rows($side_n_result) > 0) {
+    while ($sidenav_row = mysqli_fetch_assoc($side_n_result)) {
+      ?>
+      
+      
          
-          <h2 class="left"><span class="left_h2">HTML</span> Tutorial</h2>
-          <a target="_top" href="default.html">HTML HOME</a>
-          <a target="_top" href="default.html">your tittle 1</a>
-          <a target="_top" href="default.html">your tittle 2</a><a target="_top" href="default.html">your tittle 1</a>
-          <a target="_top" href="default.html">your tittle 2</a>
+    
+         
+        
+         
+
+          <?php
+    }
+  }
+
+
+*/?>
+<?php
+$req = $_REQUEST['req'];
+
+$side_menu_query = "SELECT * FROM sidenavbar WHERE top_menu = '$req'";
+$side_menu_result = mysqli_query($conn, $side_menu_query);
+
+// Check if the query was successful
+if ($side_menu_result) {
+    // Create an array to store the grouped data
+    $groupedData = array();
+
+    // Fetch each row from the result set
+    while ($side_menu_row = mysqli_fetch_assoc($side_menu_result)) {
+        $hadindSidemenu = $side_menu_row['hadind_sidemenu'];
+
+        // Check if the group exists in the array
+        if (!isset($groupedData[$hadindSidemenu])) {
+            // If the group doesn't exist, create an empty array for it
+            $groupedData[$hadindSidemenu] = array();
+        }
+
+        // Add the row to the corresponding group
+        $groupedData[$hadindSidemenu][] = $side_menu_row;
+    }
+
+    // Loop through the grouped data and display it
+    foreach ($groupedData as $group => $side_menu_rows) {
+
+
+      ?>
+  <h2 class="left"><span class="left_h2"> <?php echo  $group ?></span></h2>
+
+<?php
+
+     //   echo "<h1>$group</h1>";
+        foreach ($side_menu_rows as $side_menu_row) {
+            $sideMenu = $side_menu_row['side_menu'];
+            ?>
 
 
 
 
+<a target="_top" href="html_form_attributes.html"><?php echo $sideMenu  ?></a>
 
-          <a target="_top" href="html_xhtml.html">HTML vs. XHTML</a>
+            <?php
+
+        
+
+
+          
+           
+        }
+        echo "<br>";
+    }
+} else {
+    // Handle the case when the query fails
+    echo "Error: " . mysqli_error($conn);
+}
+
+
+?>
+
+
+
+         
           <br>
           <h2 class="left"><span class="left_h2">HTML</span> Forms</h2>
           <a target="_top" href="html_form_attributes.html">HTML Input Attributes</a>

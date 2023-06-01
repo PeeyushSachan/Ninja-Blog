@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2023 at 05:05 PM
+-- Generation Time: Jun 01, 2023 at 08:15 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,8 +18,28 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `maindb`
+-- Database: `ninjablog`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `navbar`
+--
+
+CREATE TABLE `navbar` (
+  `id` int(255) NOT NULL,
+  `name` varchar(230) NOT NULL,
+  `href` varchar(120) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `navbar`
+--
+
+INSERT INTO `navbar` (`id`, `name`, `href`) VALUES
+(1, 'php', 'php'),
+(2, 'html', 'html');
 
 -- --------------------------------------------------------
 
@@ -36,7 +56,7 @@ CREATE TABLE `register` (
   `cpassword` varchar(255) NOT NULL,
   `token` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
-  `branch` varchar(50) NOT NULL,
+  `intrested_subject` varchar(255) DEFAULT NULL,
   `img` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -44,7 +64,7 @@ CREATE TABLE `register` (
 -- Dumping data for table `register`
 --
 
-INSERT INTO `register` (`id`, `user`, `email`, `mobile`, `password`, `cpassword`, `token`, `status`, `branch`, `img`) VALUES
+INSERT INTO `register` (`id`, `user`, `email`, `mobile`, `password`, `cpassword`, `token`, `status`, `intrested_subject`, `img`) VALUES
 (4, 'peeyush', 'sachana766@gmail.com', '6387302231', '$2y$10$t5ev8uRKOoGiaNH78FmhnOpUPwvMbPGnEksPi9YLjA77slWdKSGpS', '$2y$10$B2VlaFf6y2qn65muU1YRkeTnW6gLwHiVjhiDNiZQgiNIfsdRtsKkm', 'b8865d163d8ec69e23ca55ac41552d', 'active', 'Computer Science yyuuig', '72280PHP.png'),
 (5, 'peeyush', 'peeyush.ps786@gmail.com', '11', '$2y$10$mG2TsjbKbSviLr05WQCzLuSQ4zfeNDGwKiXFPfFEgWylCz9jcVGQ2', '$2y$10$MPSMOg3NqBkHyC4WCMjlyOnbVteknvTMy0984N3LkUVVZIf/WIYvy', '19d94750116a93aed360c1d7381d24', 'active', 'COMPUTER SCIENCE', ''),
 (6, 'peeyush ', 'ayushsachan4436@gmail.com', '9555724033', '$2y$10$hevhqjOicr3okqINgaPKLu6IP9u0O87zX6NnLb1NGUCA9IAgA3HwS', '$2y$10$HP..U317QKbp5sxXXGuCluArawbwj0NtjhmOTAtPwgV4x3cW76qkC', '621588f1fc53aa09a7b5cafd162da8', 'active', 'COMPUTER SCIENCE', ''),
@@ -81,9 +101,37 @@ INSERT INTO `register` (`id`, `user`, `email`, `mobile`, `password`, `cpassword`
 (161, 'Vinayak', 'redekar.vinayak1991@gmail.com', '9637206774', '$2y$10$ruOzi9DfgPSKrbS9rb9P/ue4w2wZKKkVZfkYRwfYqQYf9NJnNG8qy', '$2y$10$GnjmLLN91mDsocADQI.wZueMd8RByXOCEcFP2faOAeqtTzxhf2e2W', '6fdab3dfcf86d8df26a2d8fb0aa927redekar.vinayak1991@gmail.com', 'active', 'COMPUTER SCIENCE & ENGINEERING', ''),
 (162, 'gurunath', 'gurubirangaddi@gmail.com', '9503312268', '$2y$10$lQkFzz1R3l2tUuGypko7Xu6Ho1mV07cIk.ccEib/TiwjFxmCgDT2.', '$2y$10$V4IIrdnWS1CNOQyRiJAaQOe4Y4ZwP963cOofelUp/XqIkFRud78Wa', '81ee10a157f8e4fb610253ad335829gurubirangaddi@gmail.com', 'active', 'COMPUTER SCIENCE & ENGINEERING', '');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sidenavbar`
+--
+
+CREATE TABLE `sidenavbar` (
+  `id` int(255) NOT NULL,
+  `side_menu` varchar(255) NOT NULL,
+  `top_menu` varchar(255) NOT NULL,
+  `hadind_sidemenu` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `sidenavbar`
+--
+
+INSERT INTO `sidenavbar` (`id`, `side_menu`, `top_menu`, `hadind_sidemenu`) VALUES
+(1, 'variable', 'php', 'ONE'),
+(2, 'variable', 'php', 'ONE'),
+(3, 'HTML HOME', 'html', 'TWO');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `navbar`
+--
+ALTER TABLE `navbar`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `register`
@@ -92,14 +140,32 @@ ALTER TABLE `register`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `sidenavbar`
+--
+ALTER TABLE `sidenavbar`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `navbar`
+--
+ALTER TABLE `navbar`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
+
+--
+-- AUTO_INCREMENT for table `sidenavbar`
+--
+ALTER TABLE `sidenavbar`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

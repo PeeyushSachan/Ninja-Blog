@@ -11,13 +11,6 @@
 include('dbcon.php');
 
 
-
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
- echo "Connected successfully";
-
 $n_sql= "select*from navbar";
 $n_result=mysqli_query($conn,$n_sql);
 
@@ -43,7 +36,7 @@ $n_result=mysqli_query($conn,$n_sql);
 if (mysqli_num_rows($n_result) > 0) {
   while ($row = mysqli_fetch_assoc($n_result)) {
     ?>
-    <a class="w3-bar-item w3-button" href='default.php' title='Python Tutorial'><?php echo $row["id"]; ?></a>
+    <a class="w3-bar-item w3-button" href='default.php?req=<?php echo $row["name"]; ?>' title='Python Tutorial'><?php echo $row["name"]; ?></a>
     <?php
   }
 }
