@@ -150,12 +150,16 @@ if ($side_menu_result) {
      //   echo "<h1>$group</h1>";
         foreach ($side_menu_rows as $side_menu_row) {
             $sideMenu = $side_menu_row['side_menu'];
+
+            $currentURL = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
             ?>
 
 
 
 
-<a target="_top" href="html_form_attributes.html"><?php echo $sideMenu  ?></a>
+<a target="_top" href="<?php echo $currentURL.'&req2='.$sideMenu; ?>"><?php echo $sideMenu; ?></a>
+
 
             <?php
 
